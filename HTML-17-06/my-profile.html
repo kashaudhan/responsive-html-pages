@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tata Power Solar</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="humburger">
+        <div class="icon-left"></div>
+        <div class="icon-right"></div>
+      </div>
+      <a href="#" class="logo">
+        <img src="./assets/img/Panelstack_Logo.png" alt="Panelstack" />
+      </a>
+      <a href="javascript:void(0);" class="sub_logo">
+        <img src="./assets/img/tata-solar.png" alt="Solar" />
+      </a>
+    </header>
+    <main class="main-controller">
+      <div class="backdrop"></div>
+      <aside class="aside_setion">
+        <nav class="navbar">
+          <ul class="nav_list">
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon Dashboard"></span>
+                </div>
+                <span class="nav_text">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon project"></span>
+                </div>
+                <span class="nav_text">Projects</span>
+              </a>
+            </li>
+            <li class="sub_list active" id="sublist" onclick="toggleClass()">
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon setting"></span>
+                </div>
+                <span>Organization Settings</span>
+              </a>
+              <ul class="sub_nav">
+                <li>
+                  <a href="#">- Organization Profile</a>
+                </li>
+                <li>
+                  <a href="#">- Manage Component</a>
+                </li>
+                <li>
+                  <a href="#">- Design Defaults</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon favorite"></span>
+                </div>
+                <span>My Favorites</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon help"></span>
+                </div>
+                <span>Help Docs</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="profile_details">
+          <span class="profile_icon">
+            <img src="./assets/img/dummy-profile.svg" alt="Profile" />
+          </span>
+          <div class="pro_text">
+            <h5>Deepanshu Sharma</h5>
+            <h6>deepanshu@thesolarlab.com</h6>
+          </div>
+        </div>
+      </aside>
+      <section class="right_section">
+        <div class="content_section">
+          <div class="filter_section">
+            <div class="title">My Profile</div>
+          </div>
+          <div class="tabs_section">
+            <ul class="tabs_list">
+              <li class="active">
+                <span>Personal Details</span>
+              </li>
+              <li>
+                <span>My Team</span>
+              </li>
+              <li>
+                <span>Subscription</span>
+              </li>
+              <li>
+                <span>Change Password</span>
+              </li>
+            </ul>
+          </div>
+          <div class="profile_controller">
+            <div class="col_row">
+              <div class="col col_left">
+                <div class="card">
+                  <div class="profile_form">
+                    <div class="profile_icon">
+                      <figure>
+                        <img src="./assets/img/pro_ico.png" alt="Profile Name" />
+                        <span class="change_btn">
+                          <i class="fas fa-camera"></i>
+                          <input type="file" />
+                        </span>
+                      </figure>
+                    </div>
+                    <div class="floating-form">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value="Deepanshu Sharma" />
+                        <label>Full Name</label>
+                      </div>
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value="deepanshu.sharma@thesolarlabs.com" />
+                        <label>Email Id</label>
+                      </div>
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value="8010508663" />
+                        <label>Mobile Number</label>
+                      </div>
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value="Role" />
+                        <label>Admin</label>
+                      </div>
+                      <div class="api_field">
+                        <a class="new_api" href="#">Generate New</a>
+                        <div class="floating-label">
+                          <input class="floating-input" type="text" placeholder=" " value="f943**************************5467" />
+                          <label>API Key</label>
+                        </div>
+                      </div>
+                      
+                      <div class="sumbmit_btn">
+                        <input class="btn btn-primary" disabled type="submit" value="Save" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4>My Add-ons</h4>
+                  <ul class="info_list">
+                    <li>
+                      <p>3D Model export for SketchUp and PVsyst</p>
+                      <div class="pricing">&#8377;15,000/Year</div>
+                    </li>
+                    <li>
+                      <p>API Integration</p>
+                      <div class="pricing">&#8377;15,000/Year</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col col_right">
+                <div class="card">
+                  <h4>Plan Details</h4>
+                  <div class="table_section table_normal">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Basic</th>
+                          <th>Used</th>
+                          <th>Unused</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="md_head">Basic</div>
+                            <div class="value_type">5 Users</div> 
+                          </td>
+                          <td>
+                            <div class="md_head">Used</div>
+                            <div class="value_type">4</div> 
+                          </td>
+                          <td>
+                            <div class="md_head">Used</div>
+                            <div class="value_type">1</div> 
+                          </td>
+                        </tr>
+                        <tr class="td_heading">
+                          <td colspan="3">
+                            <strong>Add-ons</strong>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="md_head">Basic</div>
+                            <div class="value_type">3D Model export for SketchUp
+                              and PVsyst (3 Users)</div> 
+                          </td>
+                          <td>
+                            <div class="md_head">Used</div>
+                            <div class="value_type">2</div> 
+                          </td>
+                          <td>
+                            <div class="md_head">Used</div>
+                            <div class="value_type">1</div> 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="md_head">Basic</div>
+                            <div class="value_type">API Integration (1 User)</div> 
+                          </td>
+                          <td>
+                            <div class="md_head">Used</div>
+                            <div class="value_type">1</div> 
+                          </td>
+                          <td>
+                            <div class="md_head">Used</div>
+                            <div class="value_type">0</div> 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="md_head">Basic</div>
+                            <div class="value_type">Detailed Design Lite (Sites up
+                              to 200 Kw) (5 Users)</div> 
+                          </td>
+                          <td>
+                            <div class="md_head">Used</div>
+                            <div class="value_type">4</div> 
+                          </td>
+                          <td>
+                            <div class="md_head">Used</div>
+                            <div class="value_type">1</div> 
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="more_addons">
+                    <button class="btn btn-primary">Buy More Add-ons</button>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4>Project Sharing</h4>
+                  <div class="toggle-button-cover">
+                    <h5>Default Project Sharing</h5>
+                    <div class="toggle_btn">
+                      <input type="checkbox" class="checkbox">
+                      <div class="knobs"></div>
+                      <div class="layer"></div>
+                    </div>
+                  </div>
+                  <div class="share_info">
+                    <p>All your projects will be visible to everyone from your organization</p>
+                    <div class="share_input">
+                      <label>Share <span>(When sharing is off)</span></label>
+                      <div class="field_group">
+                        <input class="input_field" type="text" placeholder="deepanshu.sharma@thesolarlabs.com">
+                        <div class="input-group-append">
+                          <button class="btn btn-primary">Share</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/custom.js"></script>
+  </body>
+</html>

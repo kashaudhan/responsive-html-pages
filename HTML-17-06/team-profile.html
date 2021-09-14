@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tata Power Solar</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="humburger">
+        <div class="icon-left"></div>
+        <div class="icon-right"></div>
+      </div>
+      <a href="#" class="logo">
+        <img src="./assets/img/Panelstack_Logo.png" alt="Panelstack" />
+      </a>
+      <a href="javascript:void(0);" class="sub_logo">
+        <img src="./assets/img/tata-solar.png" alt="Solar" />
+      </a>
+    </header>
+    <main class="main-controller">
+      <div class="backdrop"></div>
+      <aside class="aside_setion">
+        <nav class="navbar">
+          <ul class="nav_list">
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon Dashboard"></span>
+                </div>
+                <span class="nav_text">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon project"></span>
+                </div>
+                <span class="nav_text">Projects</span>
+              </a>
+            </li>
+            <li class="sub_list active" id="sublist" onclick="toggleClass()">
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon setting"></span>
+                </div>
+                <span>Organization Settings</span>
+              </a>
+              <ul class="sub_nav">
+                <li>
+                  <a href="#">- Organization Profile</a>
+                </li>
+                <li>
+                  <a href="#">- Manage Component</a>
+                </li>
+                <li>
+                  <a href="#">- Design Defaults</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon favorite"></span>
+                </div>
+                <span>My Favorites</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon help"></span>
+                </div>
+                <span>Help Docs</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="profile_details">
+          <span class="profile_icon">
+            <img src="./assets/img/dummy-profile.svg" alt="Profile" />
+          </span>
+          <div class="pro_text">
+            <h5>Deepanshu Sharma</h5>
+            <h6>deepanshu@thesolarlab.com</h6>
+          </div>
+        </div>
+      </aside>
+      <section class="right_section">
+        <div class="content_section">
+          <div class="breadcrumb">
+            <ul class="breadcrumb_items">
+              <li>
+                <a href="#">My Team</a>
+              </li>
+              <li class="current">
+                <a href="#">Member Name</a>
+              </li>
+            </ul>
+          </div>
+          <div class="filter_section">
+            <div class="title">My Profile</div>
+            <div class="head_btn_group">
+              <button class="btn btn-outline">Manage Permissions</button>
+              <button class="btn btn-outline">Delete Member</button>
+            </div>
+          </div>
+          
+          <div class="profile_controller">
+            <div class="col_row">
+              <div class="col col_left">
+                <div class="card">
+                  <div class="profile_form">
+                    <div class="profile_icon">
+                      <figure>
+                        <img src="./assets/img/pro_ico.png" alt="Profile Name" />
+                        <span class="change_btn">
+                          <i class="fas fa-camera"></i>
+                          <input type="file" />
+                        </span>
+                      </figure>
+                    </div>
+                    <div class="floating-form">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value="Deepanshu Sharma" />
+                        <label>Full Name</label>
+                      </div>
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value="deepanshu.sharma@thesolarlabs.com" />
+                        <label>Email Id</label>
+                      </div>
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value="8010508663" />
+                        <label>Mobile Number</label>
+                      </div>
+                      <div class="floating-label">
+                        <select class="floating-select" onclick="this.setAttribute('value', this.value);" value="Manager">
+                          <option value="1">Manager</option>
+                          <option value="2">Team Lead</option>
+                        </select>
+                        <label>Role</label>
+                      </div>
+                      <div class="api_field">
+                        <a class="new_api" href="#">Generate New</a>
+                        <div class="floating-label">
+                          <input class="floating-input" type="text" placeholder=" " value="f943**************************5467" />
+                          <label>API Key</label>
+                        </div>
+                      </div>
+                      <div class="sumbmit_btn">
+                        <input class="btn btn-primary" disabled type="submit" value="Save" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col_right">
+                <div class="card">
+                  <div class="profile_information">
+                    <h4>Deepanshu’s Managers</h4>
+                    <ul class="mng_list">
+                      <li>
+                        <div class="mng_name">Shaharyar Shamshi</div>
+                        <span class="icon delete-alt"></span>
+                      </li>
+                      <li>
+                        <div class="mng_name">Gurleen Kaur</div>
+                        <span class="icon delete-alt"></span>
+                      </li>
+                    </ul>
+                    <div class="more_addons">
+                      <button class="btn btn-primary">Add New Manager</button>
+                      <button class="btn btn-primary">View All</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4>My Add-ons</h4>
+                  <ul class="info_list">
+                    <li>
+                      <p>3D Model export for SketchUp and PVsyst</p>
+                      <div class="pricing">&#8377;15,000/Year</div>
+                    </li>
+                    <li>
+                      <p>API Integration</p>
+                      <div class="pricing">&#8377;15,000/Year</div>
+                    </li>
+                  </ul>
+                  <div class="more_addons">
+                    <button class="btn btn-primary">Add More Add-ons</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- delete modal popup -->
+
+    <div class="modal modal_delete" id="delete_project">
+      <div class="modal-overlay modal-toggle" data-dismiss="modal"></div>
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <button class="modal-close modal-toggle" data-dismiss="modal">
+            <img src="./assets/img/close.svg" alt="Close" />
+          </button>
+          <div class="delete_content">
+            <figure>
+              <img src="./assets/img/alert.svg" alt="Alert" />
+            </figure>
+            <p>Are you sure you want to delete this project?</p>
+            <div class="button_area">
+              <button class="btn btn-primary" data-dismiss="modal">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+
+    <!-- share modal popup -->
+
+    <div class="modal modal_share" id="share_project">
+      <div class="modal-overlay modal-toggle" data-dismiss="modal"></div>
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <button class="modal-close modal-toggle" data-dismiss="modal">
+            <img src="./assets/img/close.svg" alt="Close" />
+          </button>
+          <div class="share_content">
+            <p>
+              This project is visible to your managers only. To add more people
+              enter email ids below
+            </p>
+            <div class="add_email">
+              <div class="tag">
+                shaharya.shamshi@gmail.com
+                <img src="./assets/img/close.svg" alt="Close" />
+              </div>
+              <div class="tag error">
+                ruchika@gmail.com
+                <img src="./assets/img/close.svg" alt="Close" />
+              </div>
+              <input class="add_field" type="text" value="ruchika@gmail.com|" />
+            </div>
+            <div class="error_label">
+              This email id is not registered with The Solar Labs
+            </div>
+            <div class="share_with">
+              <label>Shared with:</label>
+              <div class="email_group">
+                <div class="selected_email">
+                  Shaharyar Shamshi <span class="arrow_down"></span>
+                </div>
+                <ul class="dropdown_list">
+                  <li>Shaharyar (shaharyar.shamshi@thesolarlabs.com)</li>
+                  <li>Ruchika (ruchika@thesolarlabs.com)</li>
+                  <li>Sagar (sagar@thesolarlabs.com)</li>
+                  <li>Tania (tania@thesolarlabs.com)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="button_area">
+              <button class="btn btn-primary" data-dismiss="modal">
+                Share
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/custom.js"></script>
+  </body>
+</html>

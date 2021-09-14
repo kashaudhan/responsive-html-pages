@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tata Power Solar</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="humburger">
+        <div class="icon-left"></div>
+        <div class="icon-right"></div>
+      </div>
+      <a href="#" class="logo">
+        <img src="./assets/img/Panelstack_Logo.png" alt="Panelstack" />
+      </a>
+      <a href="javascript:void(0);" class="sub_logo">
+        <img src="./assets/img/tata-solar.png" alt="Solar" />
+      </a>
+    </header>
+    <main class="main-controller">
+      <div class="backdrop"></div>
+      <aside class="aside_setion">
+        <nav class="navbar">
+          <ul class="nav_list">
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon Dashboard"></span>
+                </div>
+                <span class="nav_text">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon project"></span>
+                </div>
+                <span class="nav_text">Projects</span>
+              </a>
+            </li>
+            <li class="sub_list active" id="sublist" onclick="toggleClass()">
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon setting"></span>
+                </div>
+                <span>Organization Settings</span>
+              </a>
+              <ul class="sub_nav">
+                <li>
+                  <a href="#">- Organization Profile</a>
+                </li>
+                <li class="active">
+                  <a href="#">- Manage Component</a>
+                </li>
+                <li>
+                  <a href="#">- Design Defaults</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon help"></span>
+                </div>
+                <span>Help Docs</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="profile_details">
+          <span class="profile_icon">
+            <img src="./assets/img/dummy-profile.svg" alt="Profile" />
+          </span>
+          <div class="pro_text">
+            <h5>Deepanshu Sharma</h5>
+            <h6>deepanshu@thesolarlab.com</h6>
+          </div>
+        </div>
+      </aside>
+      <section class="right_section">
+        <div class="content_section">
+          <div class="filter_section">
+            <div class="title">Manage Components</div>
+            <div class="starred_action">
+              <div class="toggle-button-cover">
+                <h5>Use starred components only 
+                  <div class="hover_information">
+                    <i class="fas fa-info-circle"></i>
+                    <div class="tooltip">
+                      <p>If you turn off the toggle, your organization will be able to view/use all the components available on the Panelstack database</p>
+                    </div>
+                  </div>
+                </h5>
+                <div class="toggle_btn">
+                  <input type="checkbox" class="checkbox">
+                  <div class="knobs"></div>
+                  <div class="layer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="favorite_section">
+            <div class="tabs_section">
+              <ul class="tabs_list">
+                <li>
+                  <span>Panels</span>
+                </li>
+                <li  class="active">
+                  <span>Inverters</span>
+                </li>
+              </ul>
+            </div>
+            <div class="manage_details">
+              <div class="header_details">
+                <ul class="tag_list">
+                  <li>
+                    <span>All Panels</span>
+                  </li>
+                  <li class="active">
+                    <span>Favorites</span>
+                  </li>
+                </ul>
+                <div class="search_group">
+                  <div class="addition_form">
+                    <div class="field_group">
+                      <input class="input_field" type="text" placeholder="Search panels" />
+                      <input class="input_field value_field" type="text" placeholder="Min (W)" />
+                      <input class="input_field value_field" type="text" placeholder="Max (W)" />
+                    </div>
+                    <button class="btn btn-primary"  data-toggle="modal" data-target="#make_inverter">Add Inverters</button>
+                  </div>
+                </div>
+              </div>
+              <div class="table_section table_normal">
+                <table class="data_table">
+                  <thead>
+                    <tr>
+                      <th>
+                        <input class="checkbox" type="checkbox" />
+                      </th>
+                      <th>
+                        <div class="data_head"> 
+                          <span class="title_text">Manufacturer</span>
+                          <span class="descending"></span>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="data_head"> 
+                          <span class="title_text">Size (W)</span>
+                          <span class="descending"></span>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="data_head"> 
+                          <span class="title_text">MPPT Low</span>
+                          <span class="descending"></span>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="data_head"> 
+                          <span class="title_text">MPPT High</span>
+                          <span class="descending"></span>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="data_head"> 
+                          <span class="title_text">Type</span>
+                          <span class="descending"></span>
+                        </div>
+                      </th>
+                      <th  class="text-center">
+                        Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="md_head">Add Favorite</div>
+                        <div class="value_type"><i class="fas fa-star"></i></div>
+                      </td>
+                      <td>
+                        <div class="md_head">Manufacturer</div>
+                        <div class="value_type">Sungrow 60 KTL-M  (Copy)</div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Size (W)</div>
+                        <div class="value_type">60000</div>
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT Low</div>
+                        <div class="value_type"> <span class="nowrap">550</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT High</div>
+                        <div class="value_type"> <span class="nowrap">275</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Type</div>
+                        <div class="value_type"> <span class="nowrap">String</span></div> 
+                      </td>
+                      <td class="text-center action-delete">
+                        <i class="fas fa-pencil-alt"></i>
+                        <i class="far fa-copy"></i>
+                        <i class="far fa-trash-alt" data-toggle="modal" data-target="#delete_panel"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="md_head">Add Favorite</div>
+                        <div class="value_type"><i class="far fa-star"></i></div>
+                      </td>
+                      <td>
+                        <div class="md_head">Manufacturer</div>
+                        <div class="value_type">Sungrow 60 KTL-M</div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Size (W)</div>
+                        <div class="value_type">60000</div>
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT Low</div>
+                        <div class="value_type"> <span class="nowrap">550</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT High</div>
+                        <div class="value_type"> <span class="nowrap">275</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Type</div>
+                        <div class="value_type"> <span class="nowrap">Central</span></div> 
+                      </td>
+                      <td class="text-center action-delete">
+                        <i class="far fa-copy"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="md_head">Add Favorite</div>
+                        <div class="value_type"><i class="far fa-star"></i></div>
+                      </td>
+                      <td>
+                        <div class="md_head">Manufacturer</div>
+                        <div class="value_type">Sungrow 60 KTL-M</div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Size (W)</div>
+                        <div class="value_type">60000</div>
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT Low</div>
+                        <div class="value_type"> <span class="nowrap">550</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT High</div>
+                        <div class="value_type"> <span class="nowrap">275</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Type</div>
+                        <div class="value_type"> <span class="nowrap">Micro</span></div> 
+                      </td>
+                      <td class="text-center action-delete">
+                        <i class="far fa-copy"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="md_head">Add Favorite</div>
+                        <div class="value_type"><i class="far fa-star"></i></div>
+                      </td>
+                      <td>
+                        <div class="md_head">Manufacturer</div>
+                        <div class="value_type">Sungrow 60 KTL-M</div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Size (W)</div>
+                        <div class="value_type">60000</div>
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT Low</div>
+                        <div class="value_type"> <span class="nowrap">550</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT High</div>
+                        <div class="value_type"> <span class="nowrap">275</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Type</div>
+                        <div class="value_type"> <span class="nowrap">Micro</span></div> 
+                      </td>
+                      <td class="text-center action-delete">
+                        <i class="far fa-copy"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="md_head">Add Favorite</div>
+                        <div class="value_type"><i class="far fa-star"></i></div>
+                      </td>
+                      <td>
+                        <div class="md_head">Manufacturer</div>
+                        <div class="value_type">Sungrow 60 KTL-M</div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Size (W)</div>
+                        <div class="value_type">60000</div>
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT Low</div>
+                        <div class="value_type"> <span class="nowrap">550</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT High</div>
+                        <div class="value_type"> <span class="nowrap">275</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Type</div>
+                        <div class="value_type"> <span class="nowrap">Micro</span></div> 
+                      </td>
+                      <td class="text-center action-delete">
+                        <i class="far fa-copy"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="md_head">Add Favorite</div>
+                        <div class="value_type"><i class="far fa-star"></i></div>
+                      </td>
+                      <td>
+                        <div class="md_head">Manufacturer</div>
+                        <div class="value_type">Sungrow 60 KTL-M</div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Size (W)</div>
+                        <div class="value_type">60000</div>
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT Low</div>
+                        <div class="value_type"> <span class="nowrap">550</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT High</div>
+                        <div class="value_type"> <span class="nowrap">275</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Type</div>
+                        <div class="value_type"> <span class="nowrap">Central</span></div> 
+                      </td>
+                      <td class="text-center action-delete">
+                        <i class="far fa-copy"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="md_head">Add Favorite</div>
+                        <div class="value_type"><i class="far fa-star"></i></div>
+                      </td>
+                      <td>
+                        <div class="md_head">Manufacturer</div>
+                        <div class="value_type">Sungrow 60 KTL-M</div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Size (W)</div>
+                        <div class="value_type">60000</div>
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT Low</div>
+                        <div class="value_type"> <span class="nowrap">550</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT High</div>
+                        <div class="value_type"> <span class="nowrap">275</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Type</div>
+                        <div class="value_type"> <span class="nowrap">Central</span></div> 
+                      </td>
+                      <td class="text-center action-delete">
+                        <i class="far fa-copy"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="md_head">Add Favorite</div>
+                        <div class="value_type"><i class="far fa-star"></i></div>
+                      </td>
+                      <td>
+                        <div class="md_head">Manufacturer</div>
+                        <div class="value_type">Sungrow 60 KTL-M</div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Size (W)</div>
+                        <div class="value_type">60000</div>
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT Low</div>
+                        <div class="value_type"> <span class="nowrap">550</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">MPPT High</div>
+                        <div class="value_type"> <span class="nowrap">275</span></div> 
+                      </td>
+                      <td>
+                        <div class="md_head">Type</div>
+                        <div class="value_type"> <span class="nowrap">Micro</span></div> 
+                      </td>
+                      <td class="text-center action-delete">
+                        <i class="far fa-copy"></i>
+                      </td>
+                    </tr>
+                   
+                  
+                  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+       
+        </div>
+      </section>
+    </main>
+
+    <!-- delete modal popup -->
+
+    <div class="modal modal_delete" id="delete_panel">
+      <div class="modal-overlay modal-toggle" data-dismiss="modal"></div>
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <button class="modal-close modal-toggle" data-dismiss="modal">
+            <img src="./assets/img/close.svg" alt="Close" />
+          </button>
+          <div class="delete_content">
+            <figure>
+              <img src="./assets/img/alert.svg" alt="Alert" />
+            </figure>
+            <p>Are you sure you want to delete this inverter?</p>
+            <div class="button_area">
+              <button class="btn btn-primary" data-dismiss="modal">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+
+    <!-- add panel modal popup -->
+
+    <div class="modal add_panel_modal" id="make_inverter">
+      <div class="modal-overlay modal-toggle" data-dismiss="modal"></div>
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Add Inverters</h4>
+            <button class="modal-close modal-toggle" data-dismiss="modal">
+              <span class="close"></span>
+            </button>
+          </div>
+          <div class="add_panel_content">
+            <aside class="panel_types">
+              <ul class="type_items">
+                <li class="active">
+                  <a href="javascript:void(0);" data-dismiss="modal">Make</a>
+                </li>
+                <li class="error">
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#MPPT_inverters">MPPT</a>
+                </li>
+                <li class="error">
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#DC_inverters">DC</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#AC_inverters">AC</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#physical_inverters">Physical</a>
+                </li>
+              </ul>
+            </aside>
+            <div class="right_aside">
+              <div class="inside_form">
+                <div class="floating-form">
+                  <div class="error_instructions">
+                    <ul class="error_list">
+                      <li><spna>*</spna> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                      <li><spna>*</spna> Lorem ipsum dolor sit amet consectetur.</li>
+                      <li><spna>*</spna> Lorem ipsum dolor sit amet, consectetur adipiscing.</li>
+                    </ul>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Manufacturer*</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Make*</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Series</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Source Link </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Size*</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <select class="floating-select" onclick="this.setAttribute('value', this.value);" value=" ">
+                          <option value="1">Select Inverter Type</option>
+                          <option value="2">Loram ipsum</option>
+                        </select>
+                        <label>Inverter Type*</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Region</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form_footer">
+                <div class="sumbmit_btn">
+                  <div class="upload_files btn btn-outline">
+                    <input type="file" />
+                    Upload OND File
+                  </div>
+                  <input class="btn btn-primary" type="submit" value="Add Inverter" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+    
+    <!-- add panel modal popup -->
+
+    <div class="modal add_panel_modal" id="MPPT_inverters">
+      <div class="modal-overlay modal-toggle" data-dismiss="modal"></div>
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Add Panel</h4>
+            <button class="modal-close modal-toggle" data-dismiss="modal">
+              <span class="close"></span>
+            </button>
+          </div>
+          <div class="add_panel_content">
+            <aside class="panel_types">
+              <ul class="type_items">
+                <li>
+                  <a href="javascript:void(0);" data-dismiss="modal" data-toggle="modal" data-target="#make_inverter">Make</a>
+                </li>
+                <li class="active">
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#MPPT_inverters">MPPT</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#DC_inverters">DC</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#AC_inverters">AC</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#physical_inverters">Physical</a>
+                </li>
+              </ul>
+            </aside>
+            <div class="right_aside">
+              <div class="inside_form">
+                <div class="floating-form">
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Number of MPPT*</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Number of Strings* </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>MPPT Low V*</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>MPPT High V* </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form_footer">
+                <div class="sumbmit_btn">
+                  <div class="upload_files btn btn-outline">
+                    <input type="file" />
+                    Upload OND File
+                  </div>
+                  <input class="btn btn-primary" type="submit" value="Add Panel" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+
+    <!-- add panel modal popup -->
+
+    <div class="modal add_panel_modal" id="DC_inverters">
+      <div class="modal-overlay modal-toggle" data-dismiss="modal"></div>
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Add Panel</h4>
+            <button class="modal-close modal-toggle" data-dismiss="modal">
+              <span class="close"></span>
+            </button>
+          </div>
+          <div class="add_panel_content">
+            <aside class="panel_types">
+              <ul class="type_items">
+                <li>
+                  <a href="javascript:void(0);" data-dismiss="modal" data-toggle="modal" data-target="#make_inverter">Make</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#MPPT_inverters">MPPT</a>
+                </li>
+                <li  class="active">
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#DC_inverters">DC</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#AC_inverters">AC</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#physical_inverters">Physical</a>
+                </li>
+              </ul>
+            </aside>
+            <div class="right_aside">
+              <div class="inside_form">
+                <div class="floating-form">
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Max Efficiency*</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Euro Efficiency </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Nominal DC Voltage</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Rated DC Voltage</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Max DC Voltage*</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Min DC Voltage*</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Nominal DC Power</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Rated DC Power</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Max DC Power*</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Nominal DC Current</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Rated DC Current</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Max DC Current*</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form_footer">
+                <div class="sumbmit_btn">
+                  <div class="upload_files btn btn-outline">
+                    <input type="file" />
+                    Upload OND File
+                  </div>
+                  <input class="btn btn-primary" type="submit" value="Add Panel" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+
+    <!-- add panel modal popup -->
+
+    <div class="modal add_panel_modal" id="AC_inverters">
+      <div class="modal-overlay modal-toggle" data-dismiss="modal"></div>
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Add Panel</h4>
+            <button class="modal-close modal-toggle" data-dismiss="modal">
+              <span class="close"></span>
+            </button>
+          </div>
+          <div class="add_panel_content">
+            <aside class="panel_types">
+              <ul class="type_items">
+                <li>
+                  <a href="javascript:void(0);" data-dismiss="modal" data-toggle="modal" data-target="#make_inverter">Make</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#MPPT_inverters">MPPT</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#DC_inverters">DC</a>
+                </li>
+                <li class="active">
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#AC_inverters">AC</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#physical_inverters">Physical</a>
+                </li>
+              </ul>
+            </aside>
+            <div class="right_aside">
+              <div class="inside_form">
+                <div class="floating-form">
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Power Factor Min</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Power Factor Max</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Power Consumption at Night</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Number of Feed in Phases</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Nominal AC Voltage</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Rated AC Voltage</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Output AC Voltage Range End</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Output AC Voltage Range Start</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Nominal AC Power</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Rated AC Power</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Max AC Power VA</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Max AC Power W*</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Nominal AC Current</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Rated AC Current</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Max AC Current</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form_footer">
+                <div class="sumbmit_btn">
+                  <div class="upload_files btn btn-outline">
+                    <input type="file" />
+                    Upload OND File
+                  </div>
+                  <input class="btn btn-primary" type="submit" value="Add Panel" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+    <!-- add panel modal popup -->
+
+    <div class="modal add_panel_modal" id="physical_inverters">
+      <div class="modal-overlay modal-toggle" data-dismiss="modal"></div>
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Add Panel</h4>
+            <button class="modal-close modal-toggle" data-dismiss="modal">
+              <span class="close"></span>
+            </button>
+          </div>
+          <div class="add_panel_content">
+            <aside class="panel_types">
+              <ul class="type_items">
+                <li>
+                  <a href="javascript:void(0);" data-dismiss="modal" data-toggle="modal" data-target="#make_inverter">Make</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#MPPT_inverters">MPPT</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#DC_inverters">DC</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#AC_inverters">AC</a>
+                </li>
+                <li class="active">
+                  <a href="javascript:void(0);" data-toggle="modal" data-dismiss="modal" data-target="#physical_inverters">Physical</a>
+                </li>
+              </ul>
+            </aside>
+            <div class="right_aside">
+              <div class="inside_form">
+                <div class="floating-form">
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Depth*</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Height*</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Weight</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Width*</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Distortion</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Frequency</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Interface</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Operation Temperature End</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Operation Temperature Start</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value=" " />
+                        <label>Protection Class</label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="form_footer">
+                <div class="sumbmit_btn">
+                  <div class="upload_files btn btn-outline">
+                    <input type="file" />
+                    Upload OND File
+                  </div>
+                  <input class="btn btn-primary" type="submit" value="Add Panel" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+  
+
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/custom.js"></script>
+  </body>
+</html>

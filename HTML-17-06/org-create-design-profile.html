@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tata Power Solar</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="humburger">
+        <div class="icon-left"></div>
+        <div class="icon-right"></div>
+      </div>
+      <a href="#" class="logo">
+        <img src="./assets/img/Panelstack_Logo.png" alt="Panelstack" />
+      </a>
+      <a href="javascript:void(0);" class="sub_logo">
+        <img src="./assets/img/tata-solar.png" alt="Solar" />
+      </a>
+    </header>
+    <main class="main-controller">
+      <div class="backdrop"></div>
+      <aside class="aside_setion">
+        <nav class="navbar">
+          <ul class="nav_list">
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon Dashboard"></span>
+                </div>
+                <span class="nav_text">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon project"></span>
+                </div>
+                <span class="nav_text">Projects</span>
+              </a>
+            </li>
+            <li class="sub_list active" id="sublist" onclick="toggleClass()">
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon setting"></span>
+                </div>
+                <span>Organization Settings</span>
+              </a>
+              <ul class="sub_nav">
+                <li>
+                  <a href="#">- Organization Profile</a>
+                </li>
+                <li>
+                  <a href="#">- Manage Component</a>
+                </li>
+                <li class="active">
+                  <a href="#">- Design Defaults</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon help"></span>
+                </div>
+                <span>Help Docs</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="profile_details">
+          <span class="profile_icon">
+            <img src="./assets/img/dummy-profile.svg" alt="Profile" />
+          </span>
+          <div class="pro_text">
+            <h5>Deepanshu Sharma</h5>
+            <h6>deepanshu@thesolarlab.com</h6>
+          </div>
+        </div>
+      </aside>
+      <section class="right_section">
+        <div class="content_section">
+          <div class="filter_section">
+            <div class="title">Design Defaults</div>
+          </div>
+          <div class="favorite_section">
+            <div class="manage_details">
+              <div class="create_list">
+                <div class="info_content">
+                  <p>
+                    You can save default settings of the design by creating a profile here. This profile can be used while creating a design. All the settings of the profile will be reflected in the new project.
+                  </p>
+                </div>
+                <div class="add_btn">
+                  <a href="./org-design-default.html" class="btn btn-primary"
+                    >Create Design Profile</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/custom.js"></script>
+  </body>
+</html>
