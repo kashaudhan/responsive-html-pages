@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tata Power Solar</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="humburger">
+        <div class="icon-left"></div>
+        <div class="icon-right"></div>
+      </div>
+      <a href="#" class="logo">
+        <img src="./assets/img/Panelstack_Logo.png" alt="Panelstack" />
+      </a>
+      <a href="javascript:void(0);" class="sub_logo">
+        <img src="./assets/img/tata-solar.png" alt="Solar" />
+      </a>
+    </header>
+    <main class="main-controller">
+      <div class="backdrop"></div>
+      <aside class="aside_setion">
+        <nav class="navbar">
+          <ul class="nav_list">
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon Dashboard"></span>
+                </div>
+                <span class="nav_text">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon project"></span>
+                </div>
+                <span class="nav_text">Projects</span>
+              </a>
+            </li>
+            <li class="sub_list active" id="sublist" onclick="toggleClass()">
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon setting"></span>
+                </div>
+                <span>Organization Settings</span>
+              </a>
+              <ul class="sub_nav">
+                <li class="active">
+                  <a href="#">- Organization Profile</a>
+                </li>
+                <li>
+                  <a href="#">- Manage Component</a>
+                </li>
+                <li>
+                  <a href="#">- Design Defaults</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon favorite"></span>
+                </div>
+                <span>My Favorites</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon help"></span>
+                </div>
+                <span>Help Docs</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="profile_details">
+          <span class="profile_icon">
+            <img src="./assets/img/dummy-profile.svg" alt="Profile" />
+          </span>
+          <div class="pro_text">
+            <h5>Deepanshu Sharma</h5>
+            <h6>deepanshu@thesolarlab.com</h6>
+          </div>
+        </div>
+      </aside>
+      <section class="right_section">
+        <div class="content_section">
+          <div class="filter_section">
+            <div class="title">Organization Profile</div>
+          </div>
+          <div class="profile_controller org_page">
+            <div class="col_row">
+              <div class="col col_left">
+                <div class="card">
+                  <div class="profile_form">
+                    <div class="profile_icon rectangle">
+                      <figure>
+                        <img src="./assets/img/tata-solar.png" alt="Organization Name" />
+                        <span class="change_btn">
+                          <i class="fas fa-camera"></i>
+                          <input type="file" />
+                        </span>
+                      </figure>
+                    </div>
+                    <div class="floating-form">
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value="Tata Power Solar" />
+                        <label>Organization Name</label>
+                      </div>
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value="contact@tatapowersolar" />
+                        <label>Email Id</label>
+                      </div>
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value="8010508663" />
+                        <label>Mobile Number</label>
+                      </div>
+                      <div class="floating-label">
+                        <input class="floating-input" type="text" placeholder=" " value="https://www.tatapowersolar.com" />
+                        <label>Website</label>
+                      </div>
+                      <div class="floating-label">
+                        <textarea class="floating-input floating-textarea" placeholder=" ">Tata Power Solar Systems Limited, 2nd Floor, Corporate Center B,34 Sant Tukaram Road, Carnac Bunder, Mumbai - 400 009
+                        </textarea>
+
+                        <label>Address</label>
+                      </div>
+                      <div class="sumbmit_btn">
+                        <input class="btn btn-primary" disabled type="submit" value="Save" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col_right">
+                <div class="card">
+                  <h4>About Us</h4>
+                  <div class="about_content">
+                    <p>Brightening lives across the world, Tata Power Solar is India’s largest integrated solar company.</p>
+                    <p>We are in the business of providing smiles to millions through our innovative range of solar products that makes life better.</p>
+                    <div class="edit_btn">
+                      <a href="./org-profile-edit-about.html" class="btn btn-outline">Edit</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/custom.js"></script>
+  </body>
+</html>

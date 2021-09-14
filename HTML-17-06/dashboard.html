@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tata Power Solar</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="humburger">
+        <div class="icon-left"></div>
+        <div class="icon-right"></div>
+      </div>
+      <a href="#" class="logo">
+        <img src="./assets/img/Panelstack_Logo.png" alt="Panelstack" />
+      </a>
+      <div class="header_inside">
+        <div class="dropdown">
+          <button class="dropdown-toggle">
+            <img src="./assets/img/calendar.svg" alt="Calendar" />
+            <img src="./assets/img/down-arrow-white.svg" alt="Arrow" />
+          </button>
+          <div class="dropdown_card">
+            <h5>What’s New?</h5>
+            <div class="dropdown_footer">
+              <span class="skip">Skip</span>
+              <span class="more" data-toggle="modal" data-target="#know_more">Know More</span>
+            </div>
+          </div>
+        </div>
+        <a href="javascript:void(0);" class="sub_logo">
+          <img src="./assets/img/tata-solar.png" alt="Solar" />
+        </a>
+      </div>
+    </header>
+    <main class="main-controller">
+      <div class="backdrop"></div>
+      <aside class="aside_setion">
+        <nav class="navbar">
+          <ul class="nav_list">
+            <li class="active">
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon Dashboard"></span>
+                </div>
+                <span class="nav_text">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon project"></span>
+                </div>
+                <span class="nav_text">Projects</span>
+              </a>
+            </li>
+            <li class="sub_list" id="sublist" onclick="toggleClass()">
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon setting"></span>
+                </div>
+                <span>Organization Settings</span>
+              </a>
+              <ul class="sub_nav">
+                <li>
+                  <a href="#">- Organization Profile</a>
+                </li>
+                <li>
+                  <a href="#">- Manage Component</a>
+                </li>
+                <li>
+                  <a href="#">- Design Defaults</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon favorite"></span>
+                </div>
+                <span>My Favorites</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon help"></span>
+                </div>
+                <span>Help Docs</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="profile_details">
+          <span class="profile_icon">
+            <img src="./assets/img/dummy-profile.svg" alt="Profile" />
+          </span>
+          <div class="pro_text">
+            <h5>Deepanshu Sharma</h5>
+            <h6>deepanshu@thesolarlab.com</h6>
+          </div>
+        </div>
+      </aside>
+      <section class="right_section">
+        <div class="content_section dashboard_section">
+          <div class="filter_section">
+            <div class="title">Dashboard</div>
+            <div class="filter_area">
+              <div class="project_btn">
+                <a href="./create-project-list.html" class="btn btn-primary">Create New Project</a>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard_content">
+            <ul class="dashboard_cards">
+              <li class="danger">
+                <div class="inside_card">
+                  <div class="dash_left">
+                    <h5>Total </br> Projects</h5>
+                    <strong>68</strong>
+                  </div>
+                  <div class="dash_right">
+                    <img src="./assets/img/folder.svg" alt="Projects" />
+                  </div>
+                </div>
+              </li>
+              <li class="primary">
+                <div class="inside_card">
+                  <div class="dash_left">
+                    <h5>Total Design</br> Created</h5>
+                    <strong>302</strong>
+                  </div>
+                  <div class="dash_right">
+                    <img src="./assets/img/design-icon.svg" alt="Design" />
+                  </div>
+                </div>
+              </li>
+              <li class="secondary">
+                <div class="inside_card">
+                  <div class="dash_left">
+                    <h5>Projects Created</br> this Month</h5>
+                    <strong>68</strong>
+                  </div>
+                  <div class="dash_right">
+                    <img src="./assets/img/month-icon.svg" alt="Current Month" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="dashboard_information">
+              <div class="graph_col">
+                <h4>Task Completion Graph</h4>
+                <div class="graph_div">
+                  <img src="./assets/img/graph-12.png" />
+                </div>
+              </div>
+              <div class="events_col">
+                <h4>Upcoming Events</h4>
+                <div class="inside_events">
+                  <ul class="events_list">
+                    <li>
+                      <figure class="events_img">
+                        <img src="./assets/img/events.jpg" alt="" />
+                      </figure>
+                      <div class="profile_content">
+                        <h5>Solar Company Ahmedabad</h5>
+                        <div class="profile_info">
+                          <span class="profile_icon">
+                            <img src="./assets/img/profile-icon.jpg" alt="" />
+                          </span>
+                          <div class="pro_text">
+                            <span>Siddharth Gangal</span>
+                            <spna>November 6, 2020</spna> 
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <figure class="events_img">
+                        <img src="./assets/img/events.jpg" alt="" />
+                      </figure>
+                      <div class="profile_content">
+                        <h5>Solar Company Ahmedabad</h5>
+                        <div class="profile_info">
+                          <span class="profile_icon">
+                            <img src="./assets/img/profile-icon.jpg" alt="" />
+                          </span>
+                          <div class="pro_text">
+                            <span>Siddharth Gangal</span>
+                            <spna>November 6, 2020</spna> 
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <figure class="events_img">
+                        <img src="./assets/img/events.jpg" alt="" />
+                      </figure>
+                      <div class="profile_content">
+                        <h5>Solar Company Ahmedabad</h5>
+                        <div class="profile_info">
+                          <span class="profile_icon">
+                            <img src="./assets/img/profile-icon.jpg" alt="" />
+                          </span>
+                          <div class="pro_text">
+                            <span>Siddharth Gangal</span>
+                            <spna>November 6, 2020</spna> 
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="view_all">
+                    <a href="#">View All</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- delete modal popup -->
+
+    <div class="modal more_details" id="know_more">
+      <div class="modal-overlay modal-toggle" data-dismiss="modal"></div>
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>What’s New</h4>
+            <button class="modal-close modal-toggle" data-dismiss="modal">
+              <img src="./assets/img/close.svg" alt="Close" />
+            </button>
+          </div>
+          <div class="new_content">
+            <div class="scroll_content">
+              <h5>Bug Fixes</h5>
+              <ul class="info_list">
+                <li>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>  
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget faucibus elit. Quisque suscipit consequat suscipit.</p>
+                </li>
+              </ul>
+              <h5>New Feature</h5>
+              <ul class="info_list">
+                <li>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  <ul class="info_sublist">
+                    <li>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget faucibus elit. Quisque suscipit consequat suscipit. Vestibulum est ante, cursus ac magna a, elementum ullamcorper nisl.</p>
+                    </li>
+                    <li>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget faucibus elit.</p>
+                    </li>
+                    <li>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget faucibus elit. Quisque suscipit consequat suscipit. Vestibulum est ante, cursus ac magna a, elementum ullamcorper nisl.</p>
+                    </li>
+                    <li>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget faucibus elit.</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h5>Bug Fixes</h5>
+              <ul class="info_list">
+                <li>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>  
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget faucibus elit. Quisque suscipit consequat suscipit.</p>
+                </li>
+              </ul>
+              <h5>Bug Fixes</h5>
+              <ul class="info_list">
+                <li>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>  
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget faucibus elit. Quisque suscipit consequat suscipit.</p>
+                </li>
+              </ul>
+              <h5>New Feature</h5>
+              <ul class="info_list">
+                <li>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  <ul class="info_sublist">
+                    <li>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget faucibus elit. Quisque suscipit consequat suscipit. Vestibulum est ante, cursus ac magna a, elementum ullamcorper nisl.</p>
+                    </li>
+                    <li>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget faucibus elit.</p>
+                    </li>
+                    <li>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget faucibus elit. Quisque suscipit consequat suscipit. Vestibulum est ante, cursus ac magna a, elementum ullamcorper nisl.</p>
+                    </li>
+                    <li>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget faucibus elit.</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h5>Bug Fixes</h5>
+              <ul class="info_list">
+                <li>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>  
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget faucibus elit. Quisque suscipit consequat suscipit.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/custom.js"></script>
+  </body>
+</html>

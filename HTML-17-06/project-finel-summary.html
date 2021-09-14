@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tata Power Solar</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="humburger">
+        <div class="icon-left"></div>
+        <div class="icon-right"></div>
+      </div>
+      <a href="#" class="logo">
+        <img src="./assets/img/Panelstack_Logo.png" alt="Panelstack" />
+      </a>
+      <a href="javascript:void(0);" class="sub_logo">
+        <img src="./assets/img/tata-solar.png" alt="Solar" />
+      </a>
+    </header>
+    <main class="main-controller">
+      <div class="backdrop"></div>
+      <aside class="aside_setion">
+        <nav class="navbar">
+          <ul class="nav_list">
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon Dashboard"></span>
+                </div>
+                <span class="nav_text">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon project"></span>
+                </div>
+                <span class="nav_text">Projects</span>
+              </a>
+            </li>
+            <li class="sub_list" id="sublist" onclick="toggleClass()">
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon setting"></span>
+                </div>
+                <span>Organization Settings</span>
+              </a>
+              <ul class="sub_nav">
+                <li class="active">
+                  <a href="#">- Organization Profile</a>
+                </li>
+                <li>
+                  <a href="#">- Manage Component</a>
+                </li>
+                <li>
+                  <a href="#">- Design Defaults</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon favorite"></span>
+                </div>
+                <span>My Favorites</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon help"></span>
+                </div>
+                <span>Help Docs</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="profile_details">
+          <span class="profile_icon">
+            <img src="./assets/img/dummy-profile.svg" alt="Profile" />
+          </span>
+          <div class="pro_text">
+            <h5>Deepanshu Sharma</h5>
+            <h6>deepanshu@thesolarlab.com</h6>
+          </div>
+        </div>
+      </aside>
+      <section class="right_section">
+        <div class="content_section">
+          <div class="project_summary">
+            <div class="sub_title">Project Summary</div>
+            <div class="group_title">
+              <span class="title_text">Design Final</span>
+              <button class="action_btn" data-toggle="modal" data-target="#edit_design">
+                <span class="icon edit-alt"></span>
+              </button>
+              <button class="action_btn">
+                <span class="icon download-alt"></span>
+              </button>
+              <button class="action_btn">
+                <span class="icon copy-alt"></span>
+              </button>
+              <button class="action_btn">
+                <span class="icon delete-alt"></span>
+              </button>
+            </div>
+            <div class="project_information">
+              <div class="col_row">
+                <div class="col info_col">
+                  <div class="card">
+                      <div class="card_header flex_header">
+                        <h4>Design Information</h4>
+                        <div
+                          class="edit"
+                          data-toggle="modal"
+                          data-target="#edit_design"
+                        >
+                          <span class="icon edit-alt"></span>
+                          Edit
+                        </div>
+                      </div>
+                      <div class="card_content">
+                        <div class="col_row">
+                          <div class="col">
+                            <div class="col_row">
+                              <div class="col_4 col">
+                                <div class="info_item">
+                                  <div class="label">Nameplate DC Size</div>
+                                  <div class="value">19.84 kW</div>
+                                </div>
+                              </div>
+                              <div class="col_4 col">
+                                <div class="info_item">
+                                  <div class="label">Performance Ratio</div>
+                                  <div class="value">55.8</div>
+                                </div>
+                              </div>
+                              <div class="col_4 col">
+                                <div class="info_item">
+                                  <div class="label">Total AC Size</div>
+                                  <div class="value">6 kW</div>
+                                </div>
+                              </div>
+                              <div class="col_4 col">
+                                <div class="info_item">
+                                  <div class="label">DC: AC Ration</div>
+                                  <div class="value">3:31</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col_row">
+                              <div class="col_4 col">
+                                <div class="info_item">
+                                  <div class="label">Specifica Generation</div>
+                                  <div class="value">1144.83</div>
+                                </div>
+                              </div>
+                              <div class="col_4 col">
+                                <div class="info_item">
+                                  <div class="label">Last Modified at</div>
+                                  <div class="value">20 Mar 2021</div>
+                                </div>
+                              </div>
+                              <div class="col_4 col">
+                                <div class="info_item">
+                                  <div class="label">Created By</div>
+                                  <div class="value">Deepanshu Sharma</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col design_col design_outer">
+                  <div class="design_card">
+                    <figure>
+                      <img src="./assets/img/design.jpg" alt="Design" />
+                      <button class="btn btn-primary">Edit Design</button>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+                <div class="card">
+                  <div class="card_header">
+                    <h4>Loss Analysis</h4>
+                  </div>
+                  <div class="card_content">
+                    <div class="graph_area">
+                      <img src="./assets/img/graph-1.png" alt="graph" />
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card_header">
+                    <h4>Generation Analysis</h4>
+                  </div>
+                  <div class="card_content">
+                    <div class="col_row">
+                      <div class="col">
+                        <div class="info_item">
+                          <div class="label">Total Generation</div>
+                          <div class="value">32.14</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="graph_area">
+                      <img src="./assets/img/graph-2.png" alt="graph" />
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card_header">
+                    <h4>Bill of Materials</h4>
+                  </div>
+                  <div class="card_content">
+                    <div class="material_bill">
+                      <div class="table_section table_normal">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>Component</th>
+                              <th>Description</th>
+                              <th>Quantity</th>
+                              <th class="action-title">Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="md_head">Component</div>
+                                <div class="value_type">Modules</div> 
+                              </td>
+                              <td>
+                                <div class="md_head">Description</div>
+                                <div class="value_type">Waaree Energies Ltd. Merlin WM-310-330-FX
+                                WM-315-FX</div> 
+                              </td>
+                              <td>
+                                <div class="md_head">Quantity</div>
+                                <div class="value_type"> <span class="nowrap">63</span></div> 
+                               </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="md_head">Component</div>
+                                <div class="value_type">Handrail</div> 
+                              </td>
+                              <td>
+                                <div class="md_head">Description</div>
+                                <div class="value_type">Premium Handrail</div> 
+                              </td>
+                              <td>
+                                <div class="md_head">Quantity</div>
+                                <div class="value_type"><span class="nowrap">18.130 m</span></div> 
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="md_head">Component</div>
+                                <div class="value_type">Walkways</div> 
+                              </td>
+                              <td>
+                                <div class="md_head">Description</div>
+                                <div class="value_type">Premium Walkways</div> 
+                              </td>
+                              <td>
+                              <div class="md_head">Quantity</div>
+                                <div class="value_type"><span class="nowrap">24.930 m</span></div> 
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="md_head">Component</div>
+                                <div class="value_type">Inverters</div> 
+                              </td>
+                              <td>
+                                <div class="md_head">Description</div>
+                                <div class="value_type">W3-6K Waaree</div> 
+                              </td>
+                              <td>
+                                <div class="md_head">Quantity</div>
+                                <div class="value_type"><span class="nowrap">1</span></div> 
+                              </td>
+                              <td>
+                                <div class="md_head">Action</div>
+                                <div class="value_type">
+                                  <div class="button_action">
+                                    <ul class="action_list">
+                                      <li>
+                                        <button class="btn">
+                                          <span class="icon edit-alt"></span>
+                                        </button>
+                                      </li>
+                                      <li>
+                                        <button class="btn">
+                                          <span class="icon delete-alt"></span>
+                                        </button>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div> 
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="field_group">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-primary-outline">
+                            Select Component
+                            <img
+                              src="./assets/img/down-arrow.svg"
+                              alt="arrow"
+                            />
+                          </button>
+                        </div>
+                        <input
+                          class="input_field"
+                          type="text"
+                          placeholder="Enter Make"
+                        />
+                        <input
+                          class="input_field"
+                          type="text"
+                          placeholder="Enter Quantity"
+                        />
+                        <div class="input-group-append">
+                          <button class="btn btn-primary">Add Component</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card_header flex_header">
+                    <h4>Pricing</h4>
+                    <div class="button_action">
+                      <ul class="action_list">
+                        <li>
+                          <button class="btn">
+                            <span class="icon edit-alt"></span>
+                          </button>
+                        </li>
+                        <li>
+                          <button class="btn">
+                            <span class="icon delete-alt"></span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card_content">
+                    <div class="col_row">
+                      <div class="col_4 col">
+                        <div class="info_item">
+                          <div class="label">Instrument</div>
+                          <div class="value">₹4000/kW</div>
+                        </div>
+                      </div>
+                      <div class="col_4 col">
+                        <div class="info_item">
+                          <div class="label">Price</div>
+                          <div class="value">₹689347.10</div>
+                        </div>
+                      </div>
+                      <div class="col_4 col">
+                        <div class="info_item">
+                          <div class="label">ROI</div>
+                          <div class="value">32.19%</div>
+                        </div>
+                      </div>
+                      <div class="col_4 col">
+                        <div class="info_item">
+                          <div class="label">IRR</div>
+                          <div class="value">0.17</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col_row">
+                      <div class="col_4 col">
+                        <div class="info_item">
+                          <div class="label">LCOE</div>
+                          <div class="value">3 Yrs. 3 Mos.</div>
+                        </div>
+                      </div>
+                      <div class="col_4 col">
+                        <div class="info_item">
+                          <div class="label">Payback</div>
+                          <div class="value">0%</div>
+                        </div>
+                      </div>
+                      <div class="col_4 col">
+                        <div class="info_item">
+                          <div class="label">Tax</div>
+                          <div class="value">8.9%</div>
+                        </div>
+                      </div>
+                      <div class="col_4 col">
+                        <div class="info_item">
+                          <div class="label">Discount Rate</div>
+                          <div class="value">6.25%</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col_row">
+                      <div class="col_4 col">
+                        <div class="info_item">
+                          <div class="label">Subsidy</div>
+                          <div class="value">0%</div>
+                        </div>
+                      </div>
+                      <div class="col_4 col">
+                        <div class="info_item">
+                          <div class="label">Maintenance Cost</div>
+                          <div class="value">0$/KW/year</div>
+                        </div>
+                      </div>
+                      <div class="col_4 col">
+                        <div class="info_item">
+                          <div class="label">Accelerated Years</div>
+                          <div class="value">0 yr.</div>
+                        </div>
+                      </div>
+                      <div class="col_4 col">
+                        <div class="info_item">
+                          <div class="label">Accelerated %</div>
+                          <div class="value">0%</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col_row">
+                      <div class="col_4 col">
+                        <div class="info_item">
+                          <div class="label">Accelerated Tax-Slab</div>
+                          <div class="value">0%</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- add -->
+                    <div class="add_price_td">
+                      <p>
+                        Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt
+                      </p>
+                      <button class="btn btn-primary" data-toggle="modal" data-target="#weather_station">
+                        Add Pricing
+                      </button>
+                    </div>
+                    <!-- end add -->
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- share form popup -->
+
+    <div class="modal modal_form" id="edit_design">
+      <div class="modal-overlay modal-toggle" data-dismiss="modal"></div>
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Financial Analysis</h4>
+            <button class="modal-close modal-toggle" data-dismiss="modal">
+              <img src="./assets/img/close.svg" alt="Close" />
+            </button>
+          </div>
+          <form class="inside_form">
+            <div class="scroll_content">
+              <div class="floating-form">
+                <div class="floating-label right_value">
+                  <input class="floating-input" type="text" placeholder=" " value="4000" />
+                  <label>Price</label>
+                  <div class="value_area">
+                    <span>₹/kW</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                </div>
+                <div class="floating-label right_value">
+                  <input class="floating-input" type="text" placeholder=" "  value="8.9" />
+                  <label>Tax</label>
+                  <div class="value_area">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="floating-label right_value">
+                  <input class="floating-input" type="text" placeholder=" " value="25" />
+                  <label>Expected Life</label>
+                  <div class="value_area">
+                    <span>Years</span>
+                  </div>
+                </div>
+                <div class="floating-label right_value">
+                  <input class="floating-input" type="text" placeholder=" " value="6.25" />
+                  <label>Discount Rate</label>
+                  <div class="value_area">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="floating-label right_value">
+                  <input class="floating-input" type="text" placeholder=" " value="0" />
+                  <label>Maintenance Cost</label>
+                  <div class="value_area">
+                    <span>₹/kW/Year</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                </div>
+                <div class="floating-label right_value">
+                  <input class="floating-input" type="text" placeholder=" " value="6.25" />
+                  <label>Percentage</label>
+                  <div class="value_area">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="floating-label right_value">
+                  <input class="floating-input" type="text" placeholder=" " value="0" />
+                  <label>Years</label>
+                  <div class="value_area">
+                    <span>Years</span>
+                  </div>
+                </div>
+                <div class="floating-label right_value">
+                  <input class="floating-input" type="text" placeholder=" " value="0" />
+                  <label>Tax-Slab</label>
+                  <div class="value_area">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="button_area">
+                <input type="submit" class="btn btn-primary" value="Add Pricing" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+    <!-- weather station popup -->
+
+    <div class="modal modal_table" id="weather_station">
+      <div class="modal-overlay modal-toggle" data-dismiss="modal"></div>
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Weather Stations</h4>
+            <button class="modal-close modal-toggle" data-dismiss="modal">
+              <img src="./assets/img/close.svg" alt="Close" />
+            </button>
+          </div>
+          <div class="table_section table_normal">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Location</th>
+                  <th>Source</th>
+                  <th>Distance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="sr_no">Sr. No.</span> 
+                    <strong class="sr_value">1</strong>
+                  </td>
+                  <td>
+                    <div class="md_head">Location</div>
+                    <div class="value_type">FARIDABAD (28.380, 77.300)</div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Source</div>
+                    <div class="value_type"> <span class="nowrap">Meteonorm</span></div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Distance</div>
+                    <div class="value_type"> <span class="nowrap">24.61 km (15.26 miles)</span></div> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="sr_no">Sr. No.</span> 
+                    <strong class="sr_value">2</strong>
+                  </td>
+                  <td>
+                    <div class="md_head">Location</div>
+                    <div class="value_type">GHAZIABAD (28.670, 77.430)</div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Source</div>
+                    <div class="value_type"> <span class="nowrap">Meteonorm</span></div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Distance</div>
+                    <div class="value_type"> <span class="nowrap">25.80 km (16.00 miles)</span></div> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="sr_no">Sr. No.</span> 
+                    <strong class="sr_value">3</strong>
+                  </td>
+                  <td>
+                    <div class="md_head">Location</div>
+                    <div class="value_type">BULANDSHAHR (28.400, 77.850)</div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Source</div>
+                    <div class="value_type"> <span class="nowrap">Meteonorm</span></div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Distance</div>
+                    <div class="value_type"> <span class="nowrap">25.80 km (16.00 miles)</span></div> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="sr_no">Sr. No.</span> 
+                    <strong class="sr_value">4</strong>
+                  </td>
+                  <td>
+                    <div class="md_head">Location</div>
+                    <div class="value_type">New Delhi Safdarjung AP (28.585, 77.206)</div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Source</div>
+                    <div class="value_type"> <span class="nowrap">Meteonorm</span></div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Distance</div>
+                    <div class="value_type"> <span class="nowrap">35.20 km (21.82 miles)</span></div> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="sr_no">Sr. No.</span> 
+                    <strong class="sr_value">5</strong>
+                  </td>
+                  <td>
+                    <div class="md_head">Location</div>
+                    <div class="value_type">New Delhi Safdarjung AP (28.585, 77.206)</div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Source</div>
+                    <div class="value_type"> <span class="nowrap">Meteonorm</span></div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Distance</div>
+                    <div class="value_type"> <span class="nowrap">35.20 km (21.82 miles)</span></div> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="sr_no">Sr. No.</span> 
+                    <strong class="sr_value">6</strong>
+                  </td>
+                  <td>
+                    <div class="md_head">Location</div>
+                    <div class="value_type">New Delhi Safdarjung AP (28.585, 77.206)</div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Source</div>
+                    <div class="value_type"> <span class="nowrap">Meteonorm</span></div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Distance</div>
+                    <div class="value_type"> <span class="nowrap">35.20 km (21.82 miles)</span></div> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="sr_no">Sr. No.</span> 
+                    <strong class="sr_value">7</strong>
+                  </td>
+                  <td>
+                    <div class="md_head">Location</div>
+                    <div class="value_type">FARIDABAD (28.380, 77.300)</div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Source</div>
+                    <div class="value_type"> <span class="nowrap">Meteonorm</span></div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Distance</div>
+                    <div class="value_type"> <span class="nowrap">36.43 km (22.59 miles)</span></div> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="sr_no">Sr. No.</span> 
+                    <strong class="sr_value">8</strong>
+                  </td>
+                  <td>
+                    <div class="md_head">Location</div>
+                    <div class="value_type">NEW DELHI (28.600, 77.200)</div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Source</div>
+                    <div class="value_type"> <span class="nowrap">Meteonorm</span></div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Distance</div>
+                    <div class="value_type"> <span class="nowrap">36.75 km (22.79 miles)</span></div> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="sr_no">Sr. No.</span> 
+                    <strong class="sr_value">9</strong>
+                  </td>
+                  <td>
+                    <div class="md_head">Location</div>
+                    <div class="value_type">Delhi (28.652, 77.231)</div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Source</div>
+                    <div class="value_type"> <span class="nowrap">Meteonorm</span></div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Distance</div>
+                    <div class="value_type"> <span class="nowrap">36.75 km (22.79 miles)</span></div> 
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="sr_no">Sr. No.</span> 
+                    <strong class="sr_value">10</strong>
+                  </td>
+                  <td>
+                    <div class="md_head">Location</div>
+                    <div class="value_type">Delhi (28.652, 77.231)</div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Source</div>
+                    <div class="value_type"> <span class="nowrap">Meteonorm</span></div> 
+                  </td>
+                  <td>
+                    <div class="md_head">Distance</div>
+                    <div class="value_type"> <span class="nowrap">37.70 km (23.37 miles)</span></div> 
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal_footer">
+            <div class="action_sction">
+              <div class="upload_files" data-target="#weather_data" data-toggle="modal">
+                <!-- <input type="file"> -->
+                <span class="icon upload-alt"></span>
+                Upload New File
+              </div>
+              <div class="save_btn">
+                <input class="btn btn-primary" type="submit" value="Save" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+    <!-- weather data popup -->
+
+    <div class="modal data_modal" id="weather_data">
+      <div class="modal-overlay modal-toggle" data-dismiss="modal"></div>
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Weather Data</h4>
+            <button class="modal-close modal-toggle" data-dismiss="modal">
+              <img src="./assets/img/close.svg" alt="Close" />
+            </button>
+          </div>
+          <div class="upload_section">
+            <div class="upload_from">
+              <div class="row">
+                <div class="col">
+                  <div class="upload_area">
+                    <div class="inside_content">
+                      <h5>Drag Files to Upload</h5>
+                      <div class="or">or</div>
+                      <div class="browse_button">
+                        <button class="btn btn-outline">browse file</button>
+                      </div>
+                      <div class="file_types">* Only .tm2, .tm3 and .csv formats supported</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="data_form">
+                    <div class="floating-label">  
+                      <select class="floating-select" onclick="this.setAttribute('value', this.value);" value="">
+                        <option value=" "></option>
+                        <option value="1">jpeg</option>
+                        <option value="2">pdf</option>
+                        <option value="3">docx</option>
+                      </select>
+                      <label>File type</label>
+                      <span class="error_label">Select this field before uploading the document</span>
+                    </div>
+                    <div class="floating-label">  
+                      <select class="floating-select" onclick="this.setAttribute('value', this.value);" value="">
+                        <option value=" "></option>
+                        <option value="1">Lorem</option>
+                        <option value="2">Ipsum</option>
+                        <option value="3">Imete</option>
+                      </select>
+                      <label>Select Source</label>
+                    </div>
+                    <div class="floating-label">
+                      <input class="floating-input" type="text" placeholder=" " />
+                      <label>Site Name</label>
+                    </div>
+                    <div class="floating-label">
+                      <input class="floating-input" type="text" placeholder=" " />
+                      <label>Latitude</label>
+                    </div>
+                    <div class="floating-label">
+                      <input class="floating-input" type="text" placeholder=" " />
+                      <label>Longitude</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                  <button class="btn btn-primary" disabled>Use File</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/custom.js"></script>
+  </body>
+</html>

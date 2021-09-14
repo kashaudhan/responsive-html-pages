@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tata Power Solar</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="humburger">
+        <div class="icon-left"></div>
+        <div class="icon-right"></div>
+      </div>
+      <a href="#" class="logo">
+        <img src="./assets/img/Panelstack_Logo.png" alt="Panelstack" />
+      </a>
+      <a href="javascript:void(0);" class="sub_logo">
+        <img src="./assets/img/tata-solar.png" alt="Solar" />
+      </a>
+    </header>
+    <main class="main-controller">
+      <div class="backdrop"></div>
+      <aside class="aside_setion">
+        <nav class="navbar">
+          <ul class="nav_list">
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon Dashboard"></span>
+                </div>
+                <span class="nav_text">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon project"></span>
+                </div>
+                <span class="nav_text">Projects</span>
+              </a>
+            </li>
+            <li class="sub_list" id="sublist" onclick="toggleClass()">
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon setting"></span>
+                </div>
+                <span>Organization Settings</span>
+              </a>
+              <ul class="sub_nav">
+                <li>
+                  <a href="#">- Organization Profile</a>
+                </li>
+                <li>
+                  <a href="#">- Manage Component</a>
+                </li>
+                <li>
+                  <a href="#">- Design Defaults</a>
+                </li>
+              </ul>
+            </li>
+            <li class="active">
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon favorite"></span>
+                </div>
+                <span>My Favorites</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon help"></span>
+                </div>
+                <span>Help Docs</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="profile_details">
+          <span class="profile_icon">
+            <img src="./assets/img/dummy-profile.svg" alt="Profile" />
+          </span>
+          <div class="pro_text">
+            <h5>Deepanshu Sharma</h5>
+            <h6>deepanshu@thesolarlab.com</h6>
+          </div>
+        </div>
+      </aside>
+      <section class="right_section">
+        <div class="content_section">
+          <div class="filter_section">
+            <div class="title">My Favorites</div>
+            <div class="filter_area">
+              <div class="search_field">
+                <span class="icon search"></span>
+                <input
+                  class="input_field"
+                  type="search"
+                  placeholder="Search projects"
+                />
+              </div>
+              <div class="view_type">
+                <a href="./project-list-view.html" class="tab_list active">
+                  <span class="icon list-icon"></span>
+                  <span class="list_text">List</span>
+                </a>
+                <a href="./project-map-view.html" class="tab_list">
+                  <span class="icon location"></span>
+                  <span class="list_text">Map</span>
+                </a>
+              </div>
+              <div class="project_btn">
+                <a href="./create-project-list.html" class="btn btn-primary">Create New Project</a>
+              </div>
+            </div>
+          </div>
+          <div class="favorite_section">
+            <div class="tabs_section">
+              <ul class="tabs_list">
+                <li>
+                  <span>Panels</span>
+                </li>
+                <li>
+                  <span>Inverters</span>
+                </li>
+                <li class="active">
+                  <span>Bill of Quantity (BOQ)</span>
+                </li>
+                <li>
+                  <span>Wires</span>
+                </li>
+              </ul>
+            </div>
+              <div class="create_list">
+                <figure>
+                    <a href="./my-favorites-panel.html">
+                        <img src="./assets/img/favorite-icon.svg" alt="Create" />
+                    </a>
+                </figure>
+                <div class="info_content">
+                    <p>Please add Bill of Quantities here. These components will be by default added in the Design Summary of your projects</p>
+                </div>
+                <div class="add_btn">
+                  <a href="./my-favorites-boq.html" class="btn btn-primary">Add BOQ</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- delete modal popup -->
+
+    <div class="modal modal_delete" id="delete_project">
+      <div class="modal-overlay modal-toggle" data-dismiss="modal"></div>
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <button class="modal-close modal-toggle" data-dismiss="modal">
+            <img src="./assets/img/close.svg" alt="Close" />
+          </button>
+          <div class="delete_content">
+            <figure>
+              <img src="./assets/img/alert.svg" alt="Alert" />
+            </figure>
+            <p>Are you sure you want to delete this project?</p>
+            <div class="button_area">
+              <button class="btn btn-primary" data-dismiss="modal">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+
+    <!-- share modal popup -->
+
+    <div class="modal modal_share" id="share_project">
+      <div class="modal-overlay modal-toggle" data-dismiss="modal"></div>
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <button class="modal-close modal-toggle" data-dismiss="modal">
+            <img src="./assets/img/close.svg" alt="Close" />
+          </button>
+          <div class="share_content">
+            <p>
+              This project is visible to your managers only. To add more people
+              enter email ids below
+            </p>
+            <div class="add_email">
+              <div class="tag">
+                shaharya.shamshi@gmail.com
+                <img src="./assets/img/close.svg" alt="Close" />
+              </div>
+              <div class="tag error">
+                ruchika@gmail.com
+                <img src="./assets/img/close.svg" alt="Close" />
+              </div>
+              <input class="add_field" type="text" value="ruchika@gmail.com|" />
+            </div>
+            <div class="error_label">
+              This email id is not registered with The Solar Labs
+            </div>
+            <div class="share_with">
+              <label>Shared with:</label>
+              <div class="email_group">
+                <div class="selected_email">
+                  Shaharyar Shamshi <span class="arrow_down"></span>
+                </div>
+                <ul class="dropdown_list">
+                  <li>Shaharyar (shaharyar.shamshi@thesolarlabs.com)</li>
+                  <li>Ruchika (ruchika@thesolarlabs.com)</li>
+                  <li>Sagar (sagar@thesolarlabs.com)</li>
+                  <li>Tania (tania@thesolarlabs.com)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="button_area">
+              <button class="btn btn-primary" data-dismiss="modal">
+                Share
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/custom.js"></script>
+  </body>
+</html>

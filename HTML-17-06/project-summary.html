@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tata Power Solar</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="humburger">
+        <div class="icon-left"></div>
+        <div class="icon-right"></div>
+      </div>
+      <a href="#" class="logo">
+        <img src="./assets/img/Panelstack_Logo.png" alt="Panelstack" />
+      </a>
+      <a href="javascript:void(0);" class="sub_logo">
+        <img src="./assets/img/tata-solar.png" alt="Solar" />
+      </a>
+    </header>
+    <main class="main-controller">
+      <div class="backdrop"></div>
+      <aside class="aside_setion">
+        <nav class="navbar">
+          <ul class="nav_list">
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon Dashboard"></span>
+                </div>
+                <span class="nav_text">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon project"></span>
+                </div>
+                <span class="nav_text">Projects</span>
+              </a>
+            </li>
+            <li class="sub_list" id="sublist" onclick="toggleClass()">
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon setting"></span>
+                </div>
+                <span>Organization Settings</span>
+              </a>
+              <ul class="sub_nav">
+                <li class="active">
+                  <a href="#">- Organization Profile</a>
+                </li>
+                <li>
+                  <a href="#">- Manage Component</a>
+                </li>
+                <li>
+                  <a href="#">- Design Defaults</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon favorite"></span>
+                </div>
+                <span>My Favorites</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="nav_icon">
+                  <span class="icon help"></span>
+                </div>
+                <span>Help Docs</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="profile_details">
+          <span class="profile_icon">
+            <img src="./assets/img/dummy-profile.svg" alt="Profile" />
+          </span>
+          <div class="pro_text">
+            <h5>Deepanshu Sharma</h5>
+            <h6>deepanshu@thesolarlab.com</h6>
+          </div>
+        </div>
+      </aside>
+      <section class="right_section">
+        <div class="content_section">
+          <div class="project_summary">
+            <div class="sub_title">Design Final</div>
+            <div class="group_title">
+              <span class="title_text">BL Lifesciences</span>
+              <button class="action_btn">
+                <span class="icon share-alt"></span>
+              </button>
+              <button class="action_btn">
+                <span class="icon delete-alt"></span>
+              </button>
+            </div>
+              <div class="card">
+                <div class="card_header flex_header">
+                  <h4>Project Information</h4>
+                  <div class="edit" data-toggle="modal" data-target="#info_edit">
+                    <span class="icon edit-alt"></span>
+                    Edit
+                  </div>
+                </div>
+                <div class="card_content">
+                  <div class="col_row">
+                    <div class="col">
+                      <div class="col_row">
+                        <div class="col_3 col">
+                          <div class="info_item">
+                            <div class="label">Project Name</div>
+                            <div class="value">BL Lifesciences</div>
+                          </div>
+                        </div>
+                        <div class="col_3 col">
+                          <div class="info_item">
+                            <div class="label">Created On</div>
+                            <div class="value">26 Mar 2021</div>
+                          </div>
+                        </div>
+                        <div class="col_3 col">
+                          <div class="info_item">
+                            <div class="label">Created By</div>
+                            <div class="value">Deepanshu Sharma</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col_row">
+                        <div class="col_3 col">
+                          <div class="info_item">
+                            <div class="label">Client Name</div>
+                            <div class="value">Deepanshu Sharma</div>
+                          </div>
+                        </div>
+                        <div class="col_3 col">
+                          <div class="info_item">
+                            <div class="label">Contact Number</div>
+                            <div class="value">801 050 8662</div>
+                          </div>
+                        </div>
+                        <div class="col_3 col">
+                          <div class="info_item">
+                            <div class="label">Email ID</div>
+                            <div class="value">
+                              <small>deepanshu.sharma@thesolarlabs.com</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col_row">
+                        <div class="col_3 col">
+                          <div class="info_item">
+                            <div class="label">Address</div>
+                            <div class="value">
+                              A-245, Okhla Industrial Area, Phase I, New
+                              Delhi-110020, India
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col_3 col">
+                          <div class="info_item">
+                            <div class="label">Currency</div>
+                            <div class="value">INR (&#8377;)</div>
+                          </div>
+                        </div>
+                        <div class="col_3 col">
+                          <div class="info_item">
+                            <div class="label">
+                              Weather File
+                              <button class="btn outline_danger">Change</button>
+                            </div>
+                            <div class="value">New Delhi (28.600, 77.200)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col design_col">
+                      <div class="design_card">
+                        <figure>
+                          <img src="./assets/img/design.jpg" alt="Design" />
+                        </figure>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card_header">
+                  <h4>Client Requirements</h4>
+                </div>
+                <div class="card_content">
+                  <div class="title_edit">
+                    Consumption <span class="icon edit-alt"></span>
+                  </div>
+                  <div class="col_row">
+                    <div class="col_3 col">
+                      <div class="info_item">
+                        <div class="label">Average Daily Consumption</div>
+                        <div class="value">2 kWh</div>
+                      </div>
+                    </div>
+                    <div class="col_3 col">
+                      <div class="info_item">
+                        <div class="label">Total Yearly Consumption</div>
+                        <div class="value">1200 kWh</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="graph_area">
+                    <img src="./assets/img/graph.jpg" alt="graph" />
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card_header flex_header">
+                  <h4>Designs</h4>
+                  <span class="add_design"
+                    ><strong>+</strong> Add Design</span
+                  >
+                </div>
+                <div class="card_content">
+                  <div class="added_design">
+                    <div class="card_col">
+                      <div class="design_card">
+                        <figure>
+                          <img src="./assets/img/image1.jpg" alt="Design" />
+                        </figure>
+                        <div class="info_design">
+                          <div class="name">Design Name</div>
+                          <div class="edit">Edit</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card_col">
+                      <div class="design_card">
+                        <figure>
+                          <img src="./assets/img/image1.jpg" alt="Design" />
+                        </figure>
+                        <div class="info_design">
+                          <div class="name">Design Name</div>
+                          <div class="edit">Edit</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- share form popup -->
+
+    <div class="modal modal_form" id="info_edit">
+      <div class="modal-overlay modal-toggle" data-dismiss="modal"></div>
+      <div class="modal-wrapper">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Edit Project Details</h4>
+            <button class="modal-close modal-toggle" data-dismiss="modal">
+              <img src="./assets/img/close.svg" alt="Close" />
+            </button>
+          </div>
+          <form class="inside_form">
+            <div class="scroll_content">
+              <div class="floating-form">
+                <div class="floating-label">
+                  <input class="floating-input" type="text" placeholder=" " />
+                  <label>Project Name*</label>
+                </div>
+                <div class="floating-label">
+                  <input class="floating-input" type="text" placeholder=" " />
+                  <label>System Type*</label>
+                </div>
+                <div class="floating-label">
+                  <input class="floating-input" type="text" placeholder=" " />
+                  <label>Client Name*</label>
+                </div>
+                <div class="floating-label">
+                  <input class="floating-input" type="text" placeholder=" " />
+                  <label>Contact Number</label>
+                </div>
+                <div class="floating-label">
+                  <input class="floating-input" type="text" placeholder=" " />
+                  <label>Email Id</label>
+                </div>
+                <div class="floating-label">
+                  <textarea
+                    rows="5"
+                    class="floating-input floating-textarea"
+                    placeholder=" "
+                  ></textarea>
+                  <label>Address</label>
+                </div>
+              </div>
+              <div class="button_area">
+                <input type="submit" class="btn btn-primary" value="Update"" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal end -->
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/custom.js"></script>
+  </body>
+</html>
